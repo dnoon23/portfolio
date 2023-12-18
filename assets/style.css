@@ -1,18 +1,23 @@
+/* Sets the web pages default box type to border box and font family to Lato, sans-serif */
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
 
+/* Sets the background color white and the margin/padding of elements under <body> to 0 */
 body {
   background-color: white;
   margin: 0;
   padding: 0;
 }
+
+/* Makes the page a flexbox that can wrap to allow for various screen sizes */
 main {
   display: flex;
   flex-wrap: wrap;
 }
 
+/* Places and styles the title and header of the webpage */
 .header {
   padding: 20px;
   background-color: #860a0ae1;
@@ -24,7 +29,7 @@ main {
   font-size: 48px;
 }
 
-
+/* Places and styles the navigation buttons at the top of the page */
 .nav {
   padding-top: 15px;
   margin-right: 20px;
@@ -41,18 +46,20 @@ main {
   margin-left: 25px;
 }
 
+/* Changes the appearence of the navigation items at the top of the page when hovered */
 .nav ul li a:hover {
   color: #ffffff;
   text-decoration:underline;
   font-weight: bold;
-
 }
 
+/* Sets the default color of everything under to p tag to white and removes any underlines or unwanted decorations */
 a {
   color: #ffffff;
   text-decoration: none;
 }
 
+/* Sets the font size of anything under the p tag to be 16px */
 p {
   font-size: 16px;
 }
@@ -62,11 +69,13 @@ p {
   display: inline-block;
 }
 
+/* Allows images to be given the float left property for styling */
 .float-left {
   float: left;
   margin-right: 25px;
 }
 
+/* Styles the about me section of the page */
 .description {
   margin: 20px;
   padding: 5px;
@@ -87,6 +96,7 @@ p {
   text-decoration:underline;
 }
 
+/* Styles the work section of the page */
 .work {
   margin: 20px;
   padding: 20px;
@@ -110,6 +120,102 @@ p {
   text-decoration:underline;
 }
 
+/* Sets the projects as a flex box and sets some appearance properties */
+.products {
+  flex: 4;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+ /* Sets the default apperance of the first project */
+.project {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 80%;
+}
+
+.project header {
+  padding: 20px;
+  text-align: center;
+  background: #860a0ae1;
+  color: #fff;
+}
+
+.project p {
+  text-align: center;
+}
+
+ /* Sets the default apperance of the other projects */
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 0 0 400px;
+}
+
+.card header {
+  padding: 20px;
+  text-align: center;
+  background: #860a0ae1;
+  color: #fff;
+}
+
+.card p {
+  text-align: center;
+}
+
+/* Lines of code to change the header, title, img, and border of the various project elements when hovered */
+a img:last-child {
+  display: none;  
+}
+
+a:hover img:last-child {
+  display: block;  
+}
+
+a:hover img:nth-child(3) {
+  display: none;  
+}
+
+.soon{
+  display: none;
+}
+
+.card:hover .title{
+  display:none;
+}
+
+.card:hover .soon{
+  display:flex;
+  background: #0a3586e1;
+} 
+
+.card:hover {
+  border-width: 5px;
+  padding: 6px;
+}
+
+.project:hover .soon{
+  display:flex;
+  background: #0a3586e1;
+} 
+
+.project:hover .title{
+  display:none;
+}
+
+.project:hover {
+  border-width: 5px;
+  padding: 6px;
+  background-color: #000000;
+}
+
+/* Styles the contact information at the bottom of the page */
 .cont {
   padding: 10px;
   height: auto;
@@ -141,103 +247,13 @@ p {
   color: #000000;
 }
 
+/* Changes the style if some of the contact information is hovered */
 .nav2 ul li a u:hover {
   color: #fff;
   font-weight: bold;
 }
 
-.products {
-  flex: 4;
-  background-color: #fff;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-
-.card {
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 10px;
-  padding: 10px;
-  flex: 0 0 400px;
-}
-
-.card:hover {
-  border-width: 5px;
-  padding: 6px;
-}
-
-.card header {
-  padding: 20px;
-  text-align: center;
-  background: #860a0ae1;
-  color: #fff;
-}
-
-.project {
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 10px;
-  padding: 10px;
-  flex: 80%;
-}
-.project:hover {
-  border-width: 5px;
-  padding: 6px;
-  background-color: #000000;
-}
-
-.project header {
-  padding: 20px;
-  text-align: center;
-  background: #860a0ae1;
-  color: #fff;
-}
-
-.card p {
-  text-align: center;
-}
-
-.project p {
-  text-align: center;
-}
-
-a img:last-child {
-  display: none;  
-}
-
-a:hover img:last-child {
-  display: block;  
-}
-
-a:hover img:nth-child(3) {
-  display: none;  
-}
-
-.soon{
-  display: none;
-}
-
-.card:hover .title{
-  display:none;
-}
-
-.project:hover .soon{
-  display:flex;
-  background: #0a3586e1;
-} 
-
-.project:hover .title{
-  display:none;
-}
-
-.card:hover .soon{
-  display:flex;
-  background: #0a3586e1;
-} 
-
+/* Sets the flex to column on smaller screens */
 @media screen and (max-width: 768px) {
   main {
     flex-direction: column;
