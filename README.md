@@ -2,7 +2,10 @@
 
 ## Description
 
+https://dnoon23.github.io/portfolio/
+<p>
 This project was to create a profile website to be able to show off the projects we do in this class by using html and css.  Most of the projects have not been done yet but I designed it in a way that I should be able to easily modify the website in order to add any new projects in the future.  The most difficult part for me was implamenting the flex box that I used on the project cards so that when the website is displayed on screens of different sizes they are still lined up properly.
+</p>
 
 ![Screenshot](./assets/screenshot.png)
 
